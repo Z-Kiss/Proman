@@ -1,0 +1,177 @@
+body{
+    background-color: #58de83;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.board-container{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    background-color: white;
+    width: 90%;
+}
+.board-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: gray;
+    padding: 5px;
+}
+.board-body{
+    display: flex;
+    flex-direction: row;
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 5px;
+    min-height: 100px;
+    border-style: groove;
+    border-width: 10px;
+
+}
+.card-title{
+    padding: 10px;
+    border: 10px solid gray;
+    text-align: center;
+    color: white;
+}
+.card-slot{
+    display: flex;
+    flex-direction: column;
+    border-top-style: groove ;
+    border-width: 10px;
+    height: 100%;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 20px;
+}
+
+.card{
+    color: #cdcdcd;
+    border: groove #222222;
+    min-height: 25px;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 10px;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #2cc41b;
+}
+
+
+.navbar-button{
+    display: flex;
+    flex-direction: column;
+    height: 96px;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.reg-container{
+    /*display: none; !* Hidden by default *!*/
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.reg-box{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: fit-content; /* Could be more or less, depending on screen size */
+}
+#close{
+
+
+}
+.reg-button{
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+}
+
+input {
+    background-color: white;
+
+    width: 100px
+}
+
+.delete-btn {
+    display: flex;
+    justify-items: end;
+    background-color: white;
+    border-radius: 70px;
+    border: none;
+}
+
+.delete-board-btn {
+    display: flex;
+    font-size: 20px;
+    justify-items: end;
+    background-color: transparent;
+    border: none;
+}
+
+.delete-column-btn {
+    background-color: white;
+    border-radius: 70px;
+    border: none;
+}
+
+.hidden{
+    display: none;
+}
+.board-button-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.card.new-card{
+    border: none;
+}
+.card-title-container{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    align-content: center;
+    align-items: center;
+    height: max-content;
+
+
+}
+#card-container-input{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: 5px;
+    min-height: 100px;
+    border-style: groove;
+    border-width: 10px;
+}
