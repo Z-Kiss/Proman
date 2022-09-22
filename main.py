@@ -6,7 +6,7 @@ import mimetypes
 import queries
 
 mimetypes.add_type('application/javascript', '.js')
-app = Flask(__name__)
+app = Flask('main')
 load_dotenv()
 app.secret_key = 'fafsa'
 
