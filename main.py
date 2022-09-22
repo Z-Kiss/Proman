@@ -4,6 +4,12 @@ from util import json_response
 import util
 import mimetypes
 import queries
+import os
+import psycopg2
+
+DATABASE_URL = os.environ['DATABASE_URL']
+
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 mimetypes.add_type('application/javascript', '.js')
 app = Flask('main')
