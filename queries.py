@@ -7,8 +7,7 @@ def get_boards():
         SELECT * FROM boards
         ORDER BY id
         ;
-        """
-    )
+        """)
 
 
 def get_cards_for_board(board_id):
@@ -37,7 +36,8 @@ def register_user(user_data):
         """INSERT INTO user_data (name, email, password)
         VALUES (%(user_name)s, %(user_email)s, %(user_password)s)
         RETURNING id
-        """, {"user_name": user_data['name'], "user_email": user_data['email'], "user_password": user_data['psw']}, False)
+        """, {"user_name": user_data['name'], "user_email": user_data['email'], "user_password": user_data['psw']},
+        False)
 
 
 def get_password(user_name):
@@ -118,8 +118,7 @@ def change_title(card_data):
     UPDATE cards
     SET title = %(title)s
     WHERE id = %(id)s 
-    RETURNING id;""",
-                                       {'title': card_data['cardTitle'], 'id': card_data['cardId']})
+    RETURNING id;""", {'title': card_data['cardTitle'], 'id': card_data['cardId']})
 
 
 def get_status_for_column(column_id):
