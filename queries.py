@@ -13,7 +13,7 @@ def get_boards():
 def get_cards_for_board(board_id):
     matching_cards = data_manager.execute_select(
         """
-        SELECT cards.id, cards.board_id,cards.card_order AS order, cards.status_id, cards.title, s.color FROM cards
+        SELECT cards.id, cards.board_id,cards.card_order AS "order", cards.status_id, cards.title, s.color FROM cards
         inner join statuses s on s.id = cards.status_id
         WHERE cards.board_id = %(board_id)s
         ORDER BY status_id, card_order;
@@ -67,7 +67,7 @@ def add_new_board(title):
 
 def get_order_for_column(board_id):
     return data_manager.execute_select("""
-    SELECT COALESCE(MAX(column_order), 1)  AS order FROM columns
+    SELECT COALESCE(MAX(column_order), 1)  AS "order" FROM columns
     WHERE board_id = %(id_of_board)s
     """, {"id_of_board": board_id}, False)
 
